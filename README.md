@@ -91,7 +91,8 @@ takes a few seconds, so it runs in a background thread.
 </details>
 
 ## How to run
-Once you've installed all of the dependences you need, you can just run `fly_cursor.py` and it will start working, it may take a few minutes for the fly brain to initiate. Everything else will be [...]
+Once you've installed all of the dependences you need, you can just run `fly_cursor.py` and it will start working, it may take a few minutes for the fly brain to initiate. 
+Everything else will be made for you such as the `.json` file for it's memory and the screenshots in a different folder.
 
 ## Credits and acknowledgements
 
