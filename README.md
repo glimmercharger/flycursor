@@ -6,7 +6,7 @@ The scripts require the pip packages: `flybrain`, `pyautogui` and `pillow`. It a
 ## For the scripts themselves:
 Claude was nice enough to summerise both for me so here's the first one:
 
-### flycursor.py
+### fly_cursor.py
 <details>
 <summary>Show description of script</summary>
 
@@ -56,5 +56,29 @@ it saw, and which parts of the brain fired since the last snapshot.
 Safety: `pyautogui`'s fail-safe is on, so slam the mouse into any screen corner
 to abort. The run stops after --seconds. --no-click / --no-type switch those
 off, and --dry-run moves nothing at all.
+
+</details>
+
+### fly_vision.py
+<details>
+<summary>Show description of script</summary>
+
+`fly_vision.py` is what the fly sees on the screen, and a picture of its brain at work.
+
+Vision: a screenshot is the fly's world. From the cursor's position and heading
+a 1-D panorama is read off the screen (luminance along rays fanning out over the
+fly's field of view), then projected onto the 6,006 photoreceptors by their
+azimuth, the same recipe as flybrain.eyes.Eyes uses for its synthetic blobs.
+Brightness plus brightness *change* (motion) is what the photoreceptors get.
+
+In this spiking model the photoreceptor signal fades in the lamina (the package
+author says so too), so the panorama is ALSO run through a looming detector: a
+dark patch that grows wider on one side drives that side's LPLC2 looming
+neurons, the route that does reach the descending neurons.
+
+Snapshots: every N seconds a PNG is written with the screenshot (fly, heading,
+field of view, food), the panorama strip it saw, and a map of all 166,700
+neurons with the ones firing above the noise floor lit up by region. Rendering
+takes a few seconds, so it runs in a background thread.
 
 </details>
