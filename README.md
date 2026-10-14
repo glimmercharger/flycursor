@@ -1,7 +1,7 @@
 # FlyCursor
 A real fruit fly's brain controls your mouse and keyboard, built in Python.
 
-The scripts require the pip packages: `flybrain`, `pyautogui` and `pillow`. It also requires the fly's brain data which you can grab [here](https://github.com/alextitonis/fly.ai/releases/) or just run `fly_cursor.py` and it will attempt to grab the files automatically.
+The scripts require the pip packages: `flybrain`, `pyautogui` and `pillow`. It also requires the fly's brain data which you can grab [here](https://github.com/alextitonis/fly.ai/releases/) or just download the latest release and put it in a `fly-data` folder next to `scripts`.
 
 ## For the scripts themselves:
 Claude was nice enough to summarise both for me so here's the first one:
@@ -66,8 +66,8 @@ off, and --dry-run moves nothing at all.
 `fly_vision.py` is what the fly sees on the screen, and a picture of its brain at work.
 
 Vision: a screenshot is the fly's world. From the cursor's position and heading
-a 1-D panorama is read off the screen (luminance along rays fanning out over the
-fly's field of view), then projected onto the 6,006 photoreceptors by their
+a 1-D panorama is read off the screen (luminance along rays fanning out over
+the fly's field of view), then projected onto the 6,006 photoreceptors by their
 azimuth, the same recipe as flybrain.eyes.Eyes uses for its synthetic blobs.
 Brightness plus brightness *change* (motion) is what the photoreceptors get.
 
@@ -84,4 +84,14 @@ takes a few seconds, so it runs in a background thread.
 </details>
 
 ## How to run
-Once you've installed all of the dependences you need, you can just run `fly_cursor.py` and it will start working, it may take a few minutes for the fly brain to initiate. Everything else will be automatically made for you, such as the screenshots and `.json` file for it's memory of apps.
+Once you've installed all of the dependences you need, you can just run `fly_cursor.py` and it will start working, it may take a few minutes for the fly brain to initiate. Everything else will be [...]
+
+## Credits and acknowledgements
+
+- **FlyCursor:** Created and maintained by **Will**. See the [MIT License](LICENSE) for the project copyright and terms.
+- **Fly brain model and connectome data:** Built on [`flybrain`](https://github.com/alextitonis/fly.ai), by **Alex Titonis**. The brain data used by this project is distributed through the [`fly.ai` releases](https://github.com/alextitonis/fly.ai/releases/). Please review that project's license and attribution requirements when redistributing the data.
+- **Biological connectome:** This project uses the **MaleCNS** fruit-fly connectome represented by `flybrain`; credit and citation should follow the `flybrain`/`fly.ai` project and the underlying connectome data source.
+- **Python dependencies:** This project uses [NumPy](https://numpy.org/), [PyAutoGUI](https://github.com/asweigart/pyautogui), [PyGetWindow](https://github.com/asweigart/PyGetWindow), [Pillow](https://python-pillow.org/), and [Matplotlib](https://matplotlib.org/). These projects retain their own copyrights and licenses; consult their respective repositories or distributions for the applicable terms.
+- **Documentation assistance:** Parts of the script descriptions in this README were summarized with assistance from **Claude**.
+
+If you redistribute FlyCursor, keep the copyright and license notices in [LICENSE](LICENSE), preserve the upstream acknowledgements above, and verify the current license terms of each dependency and the `fly.ai` brain-data release you distribute.
