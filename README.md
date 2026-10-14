@@ -8,9 +8,9 @@ Claude was nice enough to summerise both for me so here's the first one:
 
 ### flycursor.py
 <details>
-<summary>Show description</summary>
+<summary>Show description of script</summary>
 
-fly_cursor.py - let the fruit fly connectome drive your mouse, and remember.
+`fly_cursor.py` lets the fruit fly connectome drive your mouse, and remember.
 
 The mouse cursor is the fly's body. It has a heading, like a walking fly.
 Senses go in through the fly's own sensory neurons, motor commands come out of
@@ -53,7 +53,7 @@ the screen around the cursor and fed to its 6,006 photoreceptors. Every
 --snapshot-every seconds a PNG goes into snapshots/ showing the screen, what
 it saw, and which parts of the brain fired since the last snapshot.
 
-Safety: pyautogui's fail-safe is on, so slam the mouse into any screen corner
+Safety: `pyautogui`'s fail-safe is on, so slam the mouse into any screen corner
 to abort. The run stops after --seconds. --no-click / --no-type switch those
 off, and --dry-run moves nothing at all.
 
