@@ -88,7 +88,7 @@ Once you've installed all of the dependences you need, you can just run `fly_cur
 
 ## Credits and acknowledgements
 
-- **FlyCursor:** Created and maintained by **Will**. See the [MIT License](LICENSE) for the project copyright and terms.
+- **FlyCursor:** Created and maintained by Will K. See the [MIT License](LICENSE) for the project copyright and terms.
 - **Fly brain model and connectome data:** Built on [`flybrain`](https://github.com/alextitonis/fly.ai), by **Alex Titonis**. The brain data used by this project is distributed through the [`fly.ai` releases](https://github.com/alextitonis/fly.ai/releases/). Please review that project's license and attribution requirements when redistributing the data.
 - **Biological connectome:** This project uses the **MaleCNS** fruit-fly connectome represented by `flybrain`; credit and citation should follow the `flybrain`/`fly.ai` project and the underlying connectome data source.
 - **Python dependencies:** This project uses [NumPy](https://numpy.org/), [PyAutoGUI](https://github.com/asweigart/pyautogui), [PyGetWindow](https://github.com/asweigart/PyGetWindow), [Pillow](https://python-pillow.org/), and [Matplotlib](https://matplotlib.org/). These projects retain their own copyrights and licenses; consult their respective repositories or distributions for the applicable terms.
