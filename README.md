@@ -1,10 +1,10 @@
-# flycursor
+# FlyCursor
 A real fruit fly's brain controls your mouse and keyboard, built in Python.
 
-The scripts require the pip packages: `flybrain`, `pyautogui` and `pillow`. It also requires the fly's brain data which you can grab [here](https://github.com/alextitonis/fly.ai/releases/) or just run[...]
+The scripts require the pip packages: `flybrain`, `pyautogui` and `pillow`. It also requires the fly's brain data which you can grab [here](https://github.com/alextitonis/fly.ai/releases/) or just run `fly_cursor.py` and it will attempt to grab the files automatically.
 
 ## For the scripts themselves:
-Claude was nice enough to summerise both for me so here's the first one:
+Claude was nice enough to summarise both for me so here's the first one:
 
 ### fly_cursor.py
 <details>
@@ -82,3 +82,6 @@ neurons with the ones firing above the noise floor lit up by region. Rendering
 takes a few seconds, so it runs in a background thread.
 
 </details>
+
+## How to run
+Once you've installed all of the dependences you need, you can just run `fly_cursor.py` and it will start working, it may take a few minutes for the fly brain to initiate. Everything else will be automatically made for you such as the screenshots and `.json` file for it's memory of apps.
