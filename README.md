@@ -30,6 +30,13 @@ its descending neurons, and the wiring in between is the MaleCNS connectome.
                                    neurons fired that step (or the next letter of --text)
        feeding                  -> reaching food = a click (unless it dislikes the place)
 
+KEYBOARD. When at least two DNg11 “punch” neurons fire during the same 20 ms
+simulation step, the fly presses a key through `pyautogui`. By default, the
+exact descending neurons that fired determine which character is selected from
+the letters, numbers, and spaces in the keyboard map. With `--text`, the fly
+types the supplied text one character at a time instead. Use `--no-type` to
+disable keyboard input, or `--dry-run` to print the keys without pressing them.
+
 MEMORY. The connectome itself never changes, so the fly is given the learning
 rule real flies use in the mushroom body: when dopamine arrives while a set of
 Kenyon cells is active, the synapses from those Kenyon cells onto the mushroom
@@ -41,7 +48,7 @@ body output neurons (MBONs) in that compartment weaken.
     synapses onto the avoidance MBONs: the fly comes to like the place.
   * Getting scared there (a loom, a screen edge, a giant-fiber jump) fires the
     PPL1 punishment dopamine neurons and weakens the synapses onto the approach
-    MBONs: the fly comes to dislike it.
+    MBONs: the fly comes to dislike the place.
   * Liked places: it chases food harder and will feed (click) there.
     Disliked places: they look threatening, so it jumps and backs away, and it
     refuses to feed there.
